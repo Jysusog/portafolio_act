@@ -16,11 +16,13 @@ const ParticlesBackground = () => {
   }, []);
 
   const particlesLoaded = useCallback(async (container?: Container) => {
-    console.log("Particles loaded", container);
+    if (container) {
+      console.log("Particles container loaded", container);
+    }
   }, []);
 
   if (!init) {
-    return null;
+    return <div>Loading particles...</div>;
   }
 
   return (
@@ -29,12 +31,12 @@ const ParticlesBackground = () => {
       particlesLoaded={particlesLoaded}
       options={{
         fullScreen: {
-          enable: true,
-          zIndex: 0
+          enable: false,
+          zIndex: 1
         },
         background: {
           color: {
-            value: "transparent",
+            value: "#000000",
           },
         },
         fpsLimit: 120,
@@ -88,7 +90,7 @@ const ParticlesBackground = () => {
             density: {
               enable: true,
             },
-            value: 100,
+            value: 120,
           },
           opacity: {
             value: 0.8,
