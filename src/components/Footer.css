@@ -1,5 +1,6 @@
 .footer {
-  background: #000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(50px);
   color: rgba(6, 182, 212, 0.6);
   text-align: center;
   padding: 2rem;
