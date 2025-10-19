@@ -1,0 +1,314 @@
+.contact-section {
+  padding: 6rem 0;
+  background: #000;
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(148, 163, 184, 0.9);
+  margin-bottom: 4rem;
+  line-height: 1.8;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(6, 182, 212, 0.05);
+  border: 2px solid rgba(6, 182, 212, 0.4);
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.2),
+              inset 0 0 25px rgba(6, 182, 212, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.15), transparent);
+  transition: left 0.8s ease;
+}
+
+.contact-card:hover::before {
+  left: 100%;
+}
+
+.contact-card:hover {
+  border-color: rgba(34, 211, 238, 0.8);
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.6),
+              0 0 60px rgba(34, 211, 238, 0.4),
+              0 10px 50px rgba(34, 211, 238, 0.3),
+              inset 0 0 35px rgba(34, 211, 238, 0.1);
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 182, 212, 0.2);
+  border: 2px solid #06b6d4;
+  border-radius: 12px;
+  color: #06b6d4;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5),
+              inset 0 0 20px rgba(6, 182, 212, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card:hover .contact-icon {
+  border-color: #22d3ee;
+  color: #22d3ee;
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.8),
+              inset 0 0 30px rgba(34, 211, 238, 0.3);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.contact-info {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  color: #22d3ee;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.contact-subtitle {
+  color: rgba(148, 163, 184, 0.9);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.contact-arrow {
+  font-size: 2rem;
+  color: #06b6d4;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card:hover .contact-arrow {
+  color: #22d3ee;
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
+  transform: translateX(10px);
+}
+
+.whatsapp:hover {
+  border-color: rgba(37, 211, 102, 0.8);
+  box-shadow: 0 0 40px rgba(37, 211, 102, 0.6),
+              0 0 60px rgba(37, 211, 102, 0.4),
+              0 10px 50px rgba(37, 211, 102, 0.3),
+              inset 0 0 35px rgba(37, 211, 102, 0.1);
+}
+
+.whatsapp:hover .contact-icon {
+  border-color: rgb(37, 211, 102);
+  color: rgb(37, 211, 102);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.8),
+              inset 0 0 30px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp:hover .contact-title {
+  color: rgb(37, 211, 102);
+  text-shadow: 0 0 15px rgba(37, 211, 102, 0.8);
+}
+
+.whatsapp:hover .contact-arrow {
+  color: rgb(37, 211, 102);
+  text-shadow: 0 0 20px rgba(37, 211, 102, 0.8);
+}
+
+.email:hover {
+  border-color: rgba(239, 68, 68, 0.8);
+  box-shadow: 0 0 40px rgba(239, 68, 68, 0.6),
+              0 0 60px rgba(239, 68, 68, 0.4),
+              0 10px 50px rgba(239, 68, 68, 0.3),
+              inset 0 0 35px rgba(239, 68, 68, 0.1);
+}
+
+.email:hover .contact-icon {
+  border-color: rgb(239, 68, 68);
+  color: rgb(239, 68, 68);
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.8),
+              inset 0 0 30px rgba(239, 68, 68, 0.3);
+}
+
+.email:hover .contact-title {
+  color: rgb(239, 68, 68);
+  text-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+}
+
+.email:hover .contact-arrow {
+  color: rgb(239, 68, 68);
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+}
+
+.linkedin:hover {
+  border-color: rgba(10, 102, 194, 0.8);
+  box-shadow: 0 0 40px rgba(10, 102, 194, 0.6),
+              0 0 60px rgba(10, 102, 194, 0.4),
+              0 10px 50px rgba(10, 102, 194, 0.3),
+              inset 0 0 35px rgba(10, 102, 194, 0.1);
+}
+
+.linkedin:hover .contact-icon {
+  border-color: rgb(10, 102, 194);
+  color: rgb(10, 102, 194);
+  box-shadow: 0 0 30px rgba(10, 102, 194, 0.8),
+              inset 0 0 30px rgba(10, 102, 194, 0.3);
+}
+
+.linkedin:hover .contact-title {
+  color: rgb(10, 102, 194);
+  text-shadow: 0 0 15px rgba(10, 102, 194, 0.8);
+}
+
+.linkedin:hover .contact-arrow {
+  color: rgb(10, 102, 194);
+  text-shadow: 0 0 20px rgba(10, 102, 194, 0.8);
+}
+
+.contact-footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(6, 182, 212, 0.05);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2),
+              inset 0 0 20px rgba(6, 182, 212, 0.05);
+}
+
+.footer-text {
+  color: rgba(148, 163, 184, 0.9);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .contact-container {
+    padding: 0 1.5rem;
+  }
+
+  .contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-intro {
+    font-size: 1rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .contact-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .contact-arrow {
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
