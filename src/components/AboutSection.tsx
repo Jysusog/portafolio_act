@@ -16,7 +16,7 @@ const AboutSection = () => {
             </div>
             <div className="panel-content">
               <p className="panel-text">
-                [Inserta aquí tu descripción profesional, experiencia y especialización en Data Science e IA]
+                Me dedico a dar soluciones innovadoras a empresas o grupos de trabajo, me mantengo al tanto de todas las noticias y avances en el campo de la inteligencia artificial y el aprendizaje automático para ofrecer las mejores soluciones posibles.
               </p>
             </div>
           </div>
@@ -30,7 +30,7 @@ const AboutSection = () => {
             </div>
             <div className="panel-content">
               <p className="panel-text">
-                [Inserta aquí tu formación académica, certificaciones y cursos relevantes]
+                Actualmente me encuentro cursando la carrera de Ingeniería en IA en Hybridge Education, como tambien diversos cursos en plataformas como Udemy, edX y CCE para mantenerme actualizado en las últimas tendencias y tecnologías del campo.
               </p>
             </div>
           </div>
@@ -45,12 +45,12 @@ const AboutSection = () => {
             <div className="panel-content">
               <div className="skills-list">
                 <span className="skill-tag">Python</span>
-                <span className="skill-tag">TensorFlow</span>
-                <span className="skill-tag">PyTorch</span>
-                <span className="skill-tag">Scikit-learn</span>
+                <span className="skill-tag">Typescript</span>
+                <span className="skill-tag">Javascript</span>
+                <span className="skill-tag">Microsfot 365</span>
                 <span className="skill-tag">SQL</span>
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">AWS</span>
+                <span className="skill-tag">Power BI</span>
+                <span className="skill-tag">VBA</span>
                 <span className="skill-tag">Git</span>
               </div>
             </div>

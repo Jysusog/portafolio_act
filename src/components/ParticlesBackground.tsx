@@ -36,7 +36,7 @@ const ParticlesBackground = () => {
         },
         background: {
           color: {
-            value: "#000000",
+            value: "#000",
           },
         },
         fpsLimit: 120,
@@ -53,11 +53,11 @@ const ParticlesBackground = () => {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 0,
             },
             repulse: {
-              distance: 150,
-              duration: 0.4,
+              distance: 1,
+              duration: 0.5,
             },
           },
         },
@@ -67,10 +67,10 @@ const ParticlesBackground = () => {
           },
           links: {
             color: "#00ffff",
-            distance: 150,
+            distance: 100,
             enable: true,
             opacity: 0.6,
-            width: 2,
+            width: 1,
             triangles: {
               enable: true,
               opacity: 0.1,
