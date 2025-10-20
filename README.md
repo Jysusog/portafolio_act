@@ -1,6 +1,6 @@
 # Portafolio Web Jesús Martínez
 
-[![Live Site](https://img.shields.io/badge/Live-portafolio-act.github-blue?style=for-the-badge)](https://portafolio-act.vercel.app)
+[![Live Site](https://img.shields.io/badge/Live_Site-Portafolio-blue?style=for-the-badge)](https://portafolio-act.vercel.app)
 [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
 
 ## 🥇 Meta
