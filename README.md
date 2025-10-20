@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# Portafolio Web Jesús Martínez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Site](https://img.shields.io/badge/Live-portafolio-act.vercel.app-blue?style=for-the-badge)](https://portafolio-act.vercel.app)
+[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
 
-Currently, two official plugins are available:
+## 🥇 Meta
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Darme a conocer en la web, mostrando proyectos, experiencia y conocimiento. El proyecto se realizo usando React y Vite inspire el diseño en la saga Tron, el sitio es adaptable a cualquier dispositivo y refleja mi experiencia y conocimiento en el mundo de la tecnología.
 
-## React Compiler
+## 🤲 Sobre mí
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Cientifico de datos & Ingeniero en Inteligencia Artificial, apasionado del mundo tech.
+Me gusta contribuir de forma significativa a los equipos y proyectos en los que participo,
+buscando siempre facilitar el trabajo, mejorar procesos y encontrar soluciones prácticas.
+Estoy comprometido con mi crecimiento profesional y disfruto aprender cosas nuevas, especialmente cuando se
+trata de aplicar la tecnología para hacer más eficiente y colaborativo nuestro día a día.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Habilidades:**
+1. Soporte Técnico y Redes
+Mantenimiento de equipos y soporte técnico a usuarios.
+Conocimientos en redes y sistemas de seguridad CCTV.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Análisis de Datos
+Excel avanzado con automatización en VBA.
+Power Query y Power BI para transformación y visualización de datos
+Manejo de SQL y PL/SQL (nivel básicointermedio).
+Experiencia en Oracle APEX y Oracle Database.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. Herramientas y Desarrollo Web
+Desarrollo web con HTML5, CSS3, JavaScript, Bootstrap, C++ y Wordpress.
+Uso de Git y GitHub para control de versiones.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Habilidades Tecnicas:**
+- Python, Numpy, Pandas,PostgreSQL
+- Git & GitHub
+- HTML/CSS/JavaScript/Typescript/React
+- Analista de procesos
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📫 Contacto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 📧 **Email:** Jesusavg2317@gmail.com
+- 💼 **LinkedIn:** [linkedin.com/in/aerobalderas](https://www.linkedin.com/in/jesus-ml)
+- 🌐 **Portfolio:** [aerobalderas.github.io](https://portafolio-act.vercel.app)
+- 💻 **GitHub:** [@aerobalderas](https://github.com/Jysusog)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+👋 Agradeceria si apoyas este proyecto dandole una estrella y compartiendolo!
+
+**Estado:** Activo | Última actualización: Octubre 2025
