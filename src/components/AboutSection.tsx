@@ -65,11 +65,11 @@ const AboutSection = () => {
             </div>
             <div className="panel-content">
               <ul className="specialties-list">
-                <li className="specialty-item">Machine Learning</li>
-                <li className="specialty-item">Deep Learning</li>
-                <li className="specialty-item">Natural Language Processing</li>
-                <li className="specialty-item">Computer Vision</li>
-                <li className="specialty-item">Data Analysis & Visualization</li>
+                <li className="specialty-item">Analisis de datos y visualizacion</li>
+                <li className="specialty-item">Procesamiento de información</li>
+                <li className="specialty-item">Logica de algoritmos</li>
+                <li className="specialty-item">Informatica Avanzada</li>
+                <li className="specialty-item">Asesor en IA</li>
               </ul>
             </div>
           </div>
