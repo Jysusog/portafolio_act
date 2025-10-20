@@ -277,8 +277,27 @@
 }
 
 @media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-container {
+    padding: 0 1rem;
+  }
+
+  .section-title-neon {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
   .contact-intro {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-grid {
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
   }
 
   .contact-card {
@@ -297,7 +316,7 @@
   }
 
   .contact-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .contact-subtitle {
@@ -305,7 +324,11 @@
   }
 
   .contact-arrow {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .contact-footer {
+    padding: 1.5rem;
   }
 
   .footer-text {

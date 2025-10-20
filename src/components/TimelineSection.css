@@ -319,35 +319,62 @@
 }
 
 @media (max-width: 480px) {
+  .timeline-section {
+    padding: 3rem 0;
+  }
+
+  .timeline-container {
+    padding: 0 1rem;
+  }
+
+  .timeline-wrapper {
+    padding: 2rem 0;
+  }
+
   .timeline-line {
-    left: 20px;
+    left: 16px;
   }
 
   .timeline-item {
-    padding-left: 60px;
+    padding-left: 50px;
+    margin-bottom: 2.5rem;
   }
 
   .timeline-node {
-    left: 20px;
-    width: 20px;
-    height: 20px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
   }
 
   .timeline-card {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .timeline-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .timeline-organization {
+    font-size: 0.95rem;
   }
 
   .timeline-description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .card-type-badge {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .card-year {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title-neon {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
   }
 }

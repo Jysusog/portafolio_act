@@ -236,8 +236,21 @@
 }
 
 @media (max-width: 480px) {
+  .about-section {
+    padding: 3rem 0;
+  }
+
+  .about-container {
+    padding: 0 1rem;
+  }
+
   .section-title-neon {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-panel {
+    padding: 1.25rem;
   }
 
   .panel-title {
@@ -247,5 +260,14 @@
   .panel-icon {
     width: 45px;
     height: 45px;
+  }
+
+  .panel-text {
+    font-size: 0.95rem;
+  }
+
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
 }

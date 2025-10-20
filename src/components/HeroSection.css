@@ -55,6 +55,12 @@
   animation: pulse-border 2s infinite;
 }
 
+.profile-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @keyframes pulse-border {
   0%, 100% {
     box-shadow: 0 0 10px rgba(0, 247, 255, 0.801),
@@ -248,8 +254,12 @@
   }
 
   .profile-image-placeholder {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-cta {
+    justify-content: center;
   }
 
   .hero-stats {
@@ -273,23 +283,45 @@
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    padding: 4rem 1rem 2rem;
+  }
+
   .hero-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero-title {
-    font-size: 1.2rem;
-  }
-
-  .hero-greeting {
     font-size: 1rem;
   }
 
+  .hero-greeting {
+    font-size: 0.9rem;
+  }
+
+  .profile-image-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
   .stat-value {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .stat-divider {
+    height: 40px;
+  }
+
+  .cta-btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
   }
 }

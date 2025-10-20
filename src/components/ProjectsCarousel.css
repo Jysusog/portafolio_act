@@ -375,10 +375,26 @@
 }
 
 @media (max-width: 480px) {
+  .projects-carousel-section {
+    padding: 3rem 0;
+  }
+
+  .carousel-container {
+    padding: 0 0.5rem;
+  }
+
   .carousel-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+
+  .carousel-btn-prev {
+    left: 0.5rem;
+  }
+
+  .carousel-btn-next {
+    right: 0.5rem;
   }
 
   .project-icon-cyber {
@@ -390,11 +406,38 @@
     font-size: 2rem;
   }
 
+  .card-header-cyber {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .card-content-cyber {
+    padding: 1.25rem;
+  }
+
+  .card-footer-cyber {
+    padding: 0 1.25rem 1.5rem;
+  }
+
   .project-title-cyber {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .project-description-cyber {
     font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .tech-tag-cyber {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .project-btn-cyber {
+    font-size: 0.85rem;
+    padding: 0.65rem 1.5rem;
+  }
+
+  .section-title-neon {
+    font-size: 1.6rem;
   }
 }
