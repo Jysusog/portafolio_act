@@ -2,7 +2,7 @@
   padding: 6rem 0;
   background: rgba(0, 0, 0, 0.6);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .projects-carousel-section::before {
@@ -34,6 +34,8 @@
   flex: 1;
   overflow: hidden;
   position: relative;
+  padding: 20px 0;
+  margin: -20px 0;
 }
 
 .carousel-inner {
@@ -329,6 +331,7 @@
 @media (max-width: 768px) {
   .projects-carousel-section {
     padding: 4rem 0;
+    overflow: hidden;
   }
 
   .carousel-container {
@@ -377,6 +380,7 @@
 @media (max-width: 480px) {
   .projects-carousel-section {
     padding: 3rem 0;
+    overflow: hidden;
   }
 
   .carousel-container {

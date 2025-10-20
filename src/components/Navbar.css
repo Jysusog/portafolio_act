@@ -69,15 +69,16 @@
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(8px, 8px);
 }
 
 .hamburger.active span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-20px);
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(9px, -9px);
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .nav-links {
@@ -195,5 +196,14 @@
 
   .hamburger span {
     width: 24px;
+    height: 2.5px;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
   }
 }
