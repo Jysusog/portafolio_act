@@ -1,6 +1,6 @@
 # Portafolio Web Jesús Martínez
 
-[![Live Site](https://img.shields.io/badge/Live-portafolio-act.vercel.app-blue?style=for-the-badge)](https://portafolio-act.vercel.app)
+[![Live Site](https://img.shields.io/badge/Live-portafolio-act.github-blue?style=for-the-badge)](https://portafolio-act.vercel.app)
 [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
 
 ## 🥇 Meta
@@ -40,9 +40,9 @@ Uso de Git y GitHub para control de versiones.
 ## 📫 Contacto
 
 - 📧 **Email:** Jesusavg2317@gmail.com
-- 💼 **LinkedIn:** [linkedin.com/in/aerobalderas](https://www.linkedin.com/in/jesus-ml)
-- 🌐 **Portfolio:** [aerobalderas.github.io](https://portafolio-act.vercel.app)
-- 💻 **GitHub:** [@aerobalderas](https://github.com/Jysusog)
+- 💼 **LinkedIn:** [linkedin.com/in/jesus-ml](https://www.linkedin.com/in/jesus-ml)
+- 🌐 **Portfolio:** [portafolio-act.vercel.app](https://portafolio-act.vercel.app)
+- 💻 **GitHub:** [@Jysusog](https://github.com/Jysusog)
 
 👋 Agradeceria si apoyas este proyecto dandole una estrella y compartiendolo!
 
