@@ -4,41 +4,41 @@ const TimelineSection = () => {
   const timelineEvents = [
     {
       id: 1,
-      year: '2024',
-      title: 'Senior Data Scientist',
-      organization: 'Tech Company',
-      description: 'Liderazgo en proyectos de IA y desarrollo de modelos predictivos avanzados.',
+      year: '2025',
+      title: 'Analista Informatico',
+      organization: 'Empresa Gubernamental',
+      description: 'Realizo automatizaciones para el area de nomina como tambien me encargo del proceso de timbrado de nomina.',
       type: 'work'
     },
     {
       id: 2,
-      year: '2022',
-      title: 'Certificación en Deep Learning',
-      organization: 'Universidad / Plataforma',
+      year: '2025',
+      title: 'Ingenieria en Inteligencia Artificial',
+      organization: 'Universidad Hybridge Education',
       description: 'Especialización en redes neuronales profundas y arquitecturas modernas.',
       type: 'education'
     },
     {
       id: 3,
-      year: '2021',
-      title: 'Data Scientist',
-      organization: 'Startup Tech',
-      description: 'Desarrollo de soluciones de ML para análisis de datos a gran escala.',
+      year: '2024',
+      title: 'Analista de Reintegros presupuestarios',
+      organization: 'Empresa Gubernamental',
+      description: 'Realice el análisis individual de cada trabajador para detectar posibles cobros indebidos, con el fin de calcular y gestionar su devolución correspondiente.',
       type: 'work'
     },
     {
       id: 4,
-      year: '2019',
-      title: 'Maestría en Ciencia de Datos',
-      organization: 'Universidad',
+      year: '2024',
+      title: 'Ciencia de Datos',
+      organization: 'Universidad ONMEX',
       description: 'Investigación en machine learning y procesamiento de lenguaje natural.',
       type: 'education'
     },
     {
       id: 5,
-      year: '2017',
-      title: 'Licenciatura en Computación',
-      organization: 'Universidad',
+      year: '2019',
+      title: 'Tecnico en Informatica',
+      organization: 'Cecyt 14 "Luis enrique Erro" IPN',
       description: 'Fundamentos de programación, algoritmos y bases de datos.',
       type: 'education'
     }

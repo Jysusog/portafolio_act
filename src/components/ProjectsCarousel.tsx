@@ -7,32 +7,26 @@ const ProjectsCarousel = () => {
   const projects = [
     {
       id: 1,
-      title: 'Proyecto de Machine Learning',
-      description: 'Sistema de predicción avanzado utilizando algoritmos de ML para análisis de datos complejos.',
-      technologies: ['Python', 'TensorFlow', 'Pandas'],
-      image: '🤖'
+      title: 'Envio de CFDIS a nivel estatal.',
+      description: 'Sistema que se encarga de enviar documentos por correo electronico de forma masiva, esto .',
+      technologies: ['Python', 'Numpy', 'Pandas'],
+      image: '💬'
     },
     {
       id: 2,
       title: 'Análisis de Datos con IA',
       description: 'Plataforma de análisis inteligente que procesa grandes volúmenes de datos en tiempo real.',
-      technologies: ['PyTorch', 'Scikit-learn', 'NumPy'],
+      technologies: ['PyTorch', 'NumPy'],
       image: '📊'
     },
     {
       id: 3,
-      title: 'Computer Vision System',
+      title: 'Computer Vision',
       description: 'Aplicación de visión por computadora para detección y clasificación de objetos.',
       technologies: ['OpenCV', 'YOLO', 'CNN'],
       image: '👁️'
-    },
-    {
-      id: 4,
-      title: 'NLP Chatbot',
-      description: 'Asistente virtual inteligente con procesamiento de lenguaje natural avanzado.',
-      technologies: ['BERT', 'Transformers', 'spaCy'],
-      image: '💬'
     }
+    
   ];
 
   const nextSlide = () => {

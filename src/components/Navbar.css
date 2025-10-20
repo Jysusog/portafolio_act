@@ -66,10 +66,12 @@
 .hamburger:hover span {
   background: #22d3ee;
   box-shadow: 0 0 15px rgba(34, 211, 238, 0.8);
+  
 }
 
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
+  
 }
 
 .hamburger.active span:nth-child(2) {
@@ -78,7 +80,7 @@
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -8px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .nav-links {
@@ -129,8 +131,9 @@
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    
   }
-
+  
   .nav-links {
     position: fixed;
     top: 0;
@@ -149,6 +152,7 @@
 
   .nav-links.active {
     right: 0;
+
   }
 
   .nav-links li {

@@ -335,12 +335,13 @@
   }
 
   .carousel-container {
-    padding: 0 1rem;
+    padding: 0 3rem;
   }
 
   .carousel-wrapper {
     flex-direction: column;
     gap: 1rem;
+    padding: 2rem;
   }
 
   .carousel-btn {
@@ -349,13 +350,13 @@
   }
 
   .carousel-btn-prev {
-    left: 1rem;
+    left: -1rem;
     top: 50%;
     transform: translateY(-50%);
   }
 
   .carousel-btn-next {
-    right: 1rem;
+    right: -1rem;
     top: 50%;
     transform: translateY(-50%);
   }
