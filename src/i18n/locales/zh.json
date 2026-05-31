@@ -1,0 +1,270 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我",
+    "stack": "技术栈",
+    "projects": "项目",
+    "future": "计划中",
+    "timeline": "经历",
+    "contact": "联系方式",
+    "theme_light": "切换到浅色主题",
+    "theme_dark": "切换到深色主题",
+    "menu_open": "打开菜单",
+    "menu_close": "关闭菜单",
+    "language": "语言"
+  },
+  "hero": {
+    "eyebrow": "作品集建设中",
+    "greeting": "你好,我是",
+    "name": "Jesús Martínez",
+    "title": "人工智能工程专业学生 · 数据科学方向",
+    "lead": "我用这个站点记录学习过程:学到的知识、探索的数据集,以及正在构建的模型。",
+    "stats": {
+      "experience_value": "4+",
+      "experience_label": "数据相关工作年限",
+      "projects_value": "进行中",
+      "projects_label": "学术项目",
+      "focus_value": "ML · NLP · BI",
+      "focus_label": "研究方向"
+    },
+    "cta_primary": "查看项目",
+    "cta_secondary": "联系我"
+  },
+  "about": {
+    "eyebrow": "关于我",
+    "title": "我是谁,我在追寻什么",
+    "quote": "我喜欢在所参与的团队与项目中做出实质性贡献,始终致力于让工作更顺畅、改进流程并找到实用的解决方案。",
+    "quote_attr": "我的工作原则",
+    "currently_label": "目前",
+    "currently_role": "A 级人力资源分析师",
+    "currently_org": "墨西哥州水务委员会",
+    "currently_study": "数据科学工程",
+    "currently_study_org": "UNITEC · 2025 – 2029",
+    "bio_lead": "我是 Jesús Martínez — 来自墨西哥的数据分析师与信息技术专员,拥有四年跨越 Oracle 咨询、基础设施支持与公共部门分析的工作经验。",
+    "bio_p1": "我从技术咨询起步,负责培训 Oracle 数据库人员;之后转向基础设施支持 — 为多家公司处理设备、网络与视频监控。最关键的转折发生在加入公共部门:先是在 IMSS-Bienestar 担任退款分析师,目前任职于墨西哥州水务委员会人力资源部,负责薪资流程自动化、规范全年度开票流程,并为部门构建内部工具。",
+    "bio_p2": "下一步是建模,而不仅是出报表。因此我在 UNITEC 攻读数据科学工程,并通过此作品集发布每一个学习中的项目:从第一个分类模型到基于公开数据的第一份可复现仪表板。",
+    "bio_p3": "我所追寻的:依靠数据做决策的团队,公共或私营部门里真实的运营问题,以及能把信息转化为具体行动的项目。",
+    "credentials_label": "学历",
+    "cred_unitec": "数据科学工程",
+    "cred_oracle": "Oracle ONE — 数据仓库前端",
+    "cred_cecyt": "信息技术专科"
+  },
+  "stack": {
+    "eyebrow": "技术栈",
+    "title": "我使用的工具",
+    "lead": "对当前水平的诚实自评,会随着每项技术在已发布项目中的使用情况持续更新。",
+    "level": {
+      "learning": "学习中",
+      "intermediate": "中级",
+      "solid": "熟练"
+    },
+    "category": {
+      "lang": "编程语言",
+      "data": "数据与分析",
+      "bi": "BI 与可视化",
+      "tools": "工具链"
+    }
+  },
+  "projects": {
+    "eyebrow": "已发布项目",
+    "title": "已完成的工作",
+    "lead": "目前还没有发布的项目。我正在准备第一批正式作品 — 请查看「计划中」一节了解即将上线的内容。",
+    "empty": "敬请期待,稍后再来。"
+  },
+  "future": {
+    "eyebrow": "路线图",
+    "title": "接下来要构建的",
+    "lead": "我在课程期间正在规划或推进中的项目。每张卡片显示当前状态、计划技术栈与目标指标。",
+    "filter_all": "全部",
+    "filter": {
+      "ml": "机器学习",
+      "nlp": "自然语言处理",
+      "dataviz": "可视化",
+      "dashboard": "仪表板",
+      "automation": "自动化"
+    },
+    "status": {
+      "planned": "已规划",
+      "in_progress": "进行中",
+      "research": "调研中"
+    },
+    "goal_label": "目标",
+    "stack_label": "技术栈",
+    "soon": "即将上线",
+    "open_details": "打开项目详情",
+    "modal": {
+      "close": "关闭",
+      "preview": "预览",
+      "repo": "代码仓库",
+      "no_repo": "仓库即将上线",
+      "category_label": "类别",
+      "status_label": "状态"
+    },
+    "items": {
+      "churn": {
+        "title": "客户流失预测",
+        "description": "基于历史行为数据的二分类模型,用于识别有流失风险的客户。",
+        "long": "可复现的流水线:摄入交易与使用数据,衍生近期活跃度特征,并训练监督模型来预测未来 90 天内的流失概率。",
+        "goal": "测试集 F1 ≥ 0.80",
+        "detail": {
+          "problem": "在客户流失发生之前提前识别风险客户,以便及时采取留存措施。",
+          "data": "脱敏后的历史客户记录,包含使用日志、工单、在网时长和计费事件,按时间划分训练/验证集。",
+          "approach": "特征工程(RFM、周差值),对比逻辑回归、随机森林与 XGBoost,采用分层验证。",
+          "results": "待定。将在测试窗口上报告精确率、召回率、F1 与 PR 曲线,并与简单规则基线对比。",
+          "next": "引入外部信号(NPS、季节性),并尝试概率校准。"
+        }
+      },
+      "nlp_news": {
+        "title": "西班牙语新闻主题分类",
+        "description": "使用词向量和监督分类器将新闻分为政治、经济、体育与文化类别的 NLP 流水线。",
+        "long": "面向西班牙语新闻流的多类别分类系统:预处理、预训练嵌入与监督模型,重点关注可解释性和不平衡类别下的表现。",
+        "goal": "准确率 ≥ 0.85",
+        "detail": {
+          "problem": "为每条新闻自动打上主题标签,便于聚合、检索与媒体覆盖分析。",
+          "data": "带主题标签(政治、经济、体育、文化)的西班牙语新闻语料,包含分词、词形还原与实体清洗。",
+          "approach": "多语言 Transformer 嵌入 + 监督分类器(逻辑回归 / 线性 SVM),用精确率、召回率与宏 F1 评估。",
+          "results": "待定。将提供混淆矩阵和按类别的定性分析。",
+          "next": "尝试 Transformer 的轻量微调,并扩展更多类别(科技、健康、观点)。"
+        }
+      },
+      "dashboard_nomina": {
+        "title": "政府薪资仪表板",
+        "description": "围绕开票、代扣与退还构建的 Power BI 交互仪表板,敏感数据已脱敏。",
+        "long": "用于汇总薪资运营的高管仪表板:开票量、代扣、处理错误和退还。所有敏感数据在入库前完成脱敏。",
+        "goal": "每日自动刷新",
+        "detail": {
+          "problem": "把分散在多个手工报表中的薪资指标集中起来,并缩短内部审计的响应时间。",
+          "data": "内部薪资与开票表,通过标识符令牌化进行脱敏,按日更新。",
+          "approach": "事件事实表 + 时间与实体维度的星型模型,DAX 度量与按部门的切片。",
+          "results": "待定。将基于代表性的合成数据发布公开版本。",
+          "next": "增加阈值告警和按周自动导出 PDF。"
+        }
+      },
+      "viz_demografia": {
+        "title": "墨西哥人口交互地图",
+        "description": "使用 D3 构建的网页可视化,基于 INEGI 数据按州与市探索人口分布模式。",
+        "long": "墨西哥人口普查的交互式可视化:按市级分色地图,可切换变量(人口、密度、年龄中位数),提供历史对比及国家级数据侧栏。",
+        "goal": "首屏加载 < 2 秒",
+        "detail": {
+          "problem": "让非技术用户也能轻松访问 INEGI 数据,跨州与市进行对比,而不必处理庞大的表格。",
+          "data": "国家人口与住房普查(INEGI),为 web 简化的 TopoJSON 几何。",
+          "approach": "用 D3 + TypeScript 渲染,采用感知均匀的调色板(viridis / cividis),提供悬停与筛选交互。",
+          "results": "待定。将在中端设备上测量加载时间与 LCP。",
+          "next": "加入历史时序与与年中普查的对比。"
+        }
+      },
+      "automation_cfdi": {
+        "title": "批量 CFDI 发送流水线",
+        "description": "把州级 CFDI 邮件脚本重构为带日志、重试与地址校验的可复现流水线。",
+        "long": "重构现有 CFDI 批量邮件任务:幂等子任务、收件人校验、错误处理与按批可追溯。",
+        "goal": "送达率 ≥ 99%",
+        "detail": {
+          "problem": "现有单体脚本不可复现也不易审计,SMTP 失败会丢失,且没有可控的重试。",
+          "data": "收件人目录与邮件模板,使用正则与域名校验进行前置验证。",
+          "approach": "模块化流水线,内置队列、带上限的指数重试、结构化日志与单元测试。",
+          "results": "待定。将上报送达率、退信率和每批耗时。",
+          "next": "迁移到编排器(Prefect / Airflow),并加入监控面板。"
+        }
+      },
+      "rec_books": {
+        "title": "技术书推荐系统",
+        "description": "基于 Goodreads 公开数据,融合内容与协同过滤的混合推荐系统。",
+        "long": "面向技术书的混合推荐系统:基于描述、标签的内容相似度,叠加基于评分的协同过滤,重点解释每一条推荐的依据。",
+        "goal": "Hit@10 ≥ 0.4",
+        "detail": {
+          "problem": "在已知少量技术书的前提下推荐相关读物,避免陷入热门书的回音壁。",
+          "data": "Goodreads 公开数据子集,包含元数据、评分与评论,过滤到技术类别。",
+          "approach": "混合模型:描述的 TF-IDF / 嵌入向量 + 矩阵分解,在时间切分上使用 Hit@10 与 MRR。",
+          "results": "待定。将与热门度基线进行对比。",
+          "next": "加入多样性控制,允许按等级与难度显式过滤。"
+        }
+      }
+    }
+  },
+  "timeline": {
+    "eyebrow": "经历",
+    "title": "教育与工作",
+    "lead": "",
+    "type": {
+      "work": "工作",
+      "education": "教育"
+    },
+    "events": {
+      "comagua": {
+        "title": "A 级人力资源分析师",
+        "organization": "墨西哥州水务委员会",
+        "description": "负责薪资开票流程的行政与分析性自动化,完成全年开票流程的规范化、开发内部工具,并为本部门编制预算上限。"
+      },
+      "unitec_cd": {
+        "title": "数据科学工程",
+        "organization": "UNITEC",
+        "description": "在读学位,聚焦应用统计、预测建模与大规模数据处理。"
+      },
+      "imss": {
+        "title": "退款分析师",
+        "organization": "IMSS-Bienestar",
+        "description": "对每位员工进行个性化分析,识别不当扣款并办理退还;实现本部门流程自动化并提供 Microsoft Office 支持。"
+      },
+      "imagen_it": {
+        "title": "技术支持经理",
+        "organization": "Imagen IT",
+        "description": "为多家公司提供硬件、软件与网络的技术支持;负责预防性与纠正性维护、三个地点的 CCTV 管理以及企业网络的监管。"
+      },
+      "oracle_one": {
+        "title": "Oracle ONE — 数据仓库前端",
+        "organization": "Oracle Next Education",
+        "description": "面向数据仓库应用的 Web 开发培训项目。"
+      },
+      "eks_oracle": {
+        "title": "Oracle 技术顾问",
+        "organization": "EKS Solutions",
+        "description": "面向 Oracle 技术培养技术顾问,聚焦数据库设计、管理与性能优化。"
+      },
+      "cecyt": {
+        "title": "信息技术专科",
+        "organization": "国家理工学院 CECyT 14 «Luis Enrique Erro Soler»",
+        "description": "编程基础、算法、数据库、计算机网络与技术支持。"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "联系方式",
+    "title": "保持联系",
+    "lead": "想要合作、讨论项目或交流数据科学的想法?以下任何一种方式都可以。",
+    "whatsapp_title": "WhatsApp",
+    "whatsapp_subtitle": "直接发消息",
+    "email_title": "邮箱",
+    "email_subtitle": "24 小时内回复",
+    "linkedin_title": "领英",
+    "linkedin_subtitle": "职业档案",
+    "footer_note": "对数据科学、机器学习与应用 AI 的机会持开放态度。"
+  },
+  "footer": {
+    "rights": "保留所有权利。",
+    "role": "数据科学家 / AI 工程师候选人",
+    "built_with": "使用 React、TypeScript 和自制 canvas 构建。"
+  },
+  "project_page": {
+    "back": "返回作品集",
+    "section": {
+      "problem": "问题",
+      "data": "数据",
+      "approach": "方案",
+      "results": "结果",
+      "next": "下一步"
+    },
+    "meta": {
+      "status": "状态",
+      "category": "类别",
+      "stack": "技术栈",
+      "goal": "目标"
+    },
+    "related": "其他项目",
+    "repo_cta": "查看仓库",
+    "no_repo": "仓库即将上线",
+    "wip_note": "此页面尚为骨架,会随项目推进逐步补充内容。",
+    "not_found_title": "未找到该项目",
+    "not_found_body": "你访问的项目不存在或尚未发布。",
+    "not_found_cta": "返回作品集"
+  }
+}

@@ -1,0 +1,208 @@
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+  align-items: start;
+}
+
+.about-side {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-5));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-quote {
+  position: relative;
+  padding: var(--space-5);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--accent);
+}
+
+.about-quote p {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-3);
+}
+
+.about-quote footer {
+  font-size: var(--fs-xs);
+  color: var(--text-mut);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.about-now-label {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: var(--space-3);
+}
+
+.about-now-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-now-list li {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.now-pin {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 7px;
+  background: var(--text-faint);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+.now-pin[data-kind='work'] {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  animation: now-pulse 2.4s ease-in-out infinite;
+}
+
+.now-pin[data-kind='study'] {
+  background: var(--accent-2);
+  box-shadow: 0 0 0 4px var(--accent-2-soft);
+}
+
+@keyframes now-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px var(--accent-soft); }
+  50% { box-shadow: 0 0 0 7px var(--accent-soft); }
+}
+
+.now-role {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.now-org {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--text-mut);
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 62ch;
+}
+
+.about-bio-lead {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text);
+  letter-spacing: -0.015em;
+  margin-bottom: var(--space-2);
+}
+
+.about-main p {
+  font-size: var(--fs-base);
+  color: var(--text-mut);
+  line-height: 1.75;
+}
+
+.about-bio-cta {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+  color: var(--text) !important;
+  font-weight: 500;
+}
+
+.about-credentials {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-6);
+}
+
+.credentials-label {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: var(--space-4);
+}
+
+.credentials-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.credential {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border);
+}
+
+.credential-role {
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.credential-meta {
+  font-size: var(--fs-xs);
+  color: var(--text-mut);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.credential-sep {
+  color: var(--text-faint);
+  margin: 0 var(--space-1);
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .about-side {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-quote {
+    padding: var(--space-4);
+  }
+
+  .about-quote p {
+    font-size: var(--fs-base);
+  }
+
+  .about-bio-lead {
+    font-size: var(--fs-md);
+  }
+}

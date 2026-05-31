@@ -1,0 +1,270 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "stack": "Stack",
+    "projects": "Projects",
+    "future": "Roadmap",
+    "timeline": "Journey",
+    "contact": "Contact",
+    "theme_light": "Switch to light theme",
+    "theme_dark": "Switch to dark theme",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Portfolio in progress",
+    "greeting": "Hi, I'm",
+    "name": "Jesús Martínez",
+    "title": "AI Engineering Student · Aspiring Data Scientist",
+    "lead": "I use this site to document my journey through the program: what I learn, the datasets I explore, and the models I'm building.",
+    "stats": {
+      "experience_value": "4+",
+      "experience_label": "Years working with data",
+      "projects_value": "Ongoing",
+      "projects_label": "Academic projects",
+      "focus_value": "ML · NLP · BI",
+      "focus_label": "Focus areas"
+    },
+    "cta_primary": "See projects",
+    "cta_secondary": "Get in touch"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Who I am and what I'm after",
+    "quote": "I like to contribute meaningfully to the teams and projects I'm part of — always trying to make the work easier, improve processes, and find practical solutions.",
+    "quote_attr": "My working principle",
+    "currently_label": "Currently",
+    "currently_role": "HR Analyst, Level A",
+    "currently_org": "Mexico State Water Commission",
+    "currently_study": "Data Science Engineering",
+    "currently_study_org": "UNITEC · 2025 – 2029",
+    "bio_lead": "I'm Jesús Martínez — a Mexican data analyst and IT technician with four years of work split between Oracle consulting, infrastructure support, and analysis in the public sector.",
+    "bio_p1": "I started as a technical consultant, training profiles on Oracle databases. From there I moved into infrastructure support — workstations, networks, and CCTV for various companies. The pivotal shift came when I joined the public sector: first as a reimbursements analyst at IMSS-Bienestar, and now in HR at the Mexico State Water Commission, where I automate payroll processes, recover a full year of tax-stamping operations, and build internal tools for the area.",
+    "bio_p2": "The next step is to model, not just report. That's why I'm pursuing a Data Science Engineering degree at UNITEC and using this portfolio to publish every formative project: from my first classification model to my first reproducible dashboard on public data.",
+    "bio_p3": "What I'm after: teams that make decisions with data, real operational problems — public or private — and projects where I can turn information into concrete action.",
+    "credentials_label": "Education",
+    "cred_unitec": "Data Science Engineering",
+    "cred_oracle": "Oracle ONE — DW Front-End",
+    "cred_cecyt": "Informatics Technician"
+  },
+  "stack": {
+    "eyebrow": "Tech stack",
+    "title": "Tools I work with",
+    "lead": "An honest self-assessment of my current level. It will be updated as each technology shows up in published projects.",
+    "level": {
+      "learning": "Learning",
+      "intermediate": "Intermediate",
+      "solid": "Solid"
+    },
+    "category": {
+      "lang": "Languages",
+      "data": "Data & analysis",
+      "bi": "BI & visualization",
+      "tools": "Tools"
+    }
+  },
+  "projects": {
+    "eyebrow": "Shipped work",
+    "title": "Finished projects",
+    "lead": "No projects have been published here yet. I'm preparing the first formal deliverables — check the Roadmap section to see what's coming.",
+    "empty": "Coming soon. Check back later."
+  },
+  "future": {
+    "eyebrow": "Roadmap",
+    "title": "What I'm building next",
+    "lead": "Projects I'm planning or actively working on during the program. Each card shows the current state, planned stack, and target metric.",
+    "filter_all": "All",
+    "filter": {
+      "ml": "Machine Learning",
+      "nlp": "NLP",
+      "dataviz": "Visualization",
+      "dashboard": "Dashboard",
+      "automation": "Automation"
+    },
+    "status": {
+      "planned": "Planned",
+      "in_progress": "In progress",
+      "research": "Researching"
+    },
+    "goal_label": "Goal",
+    "stack_label": "Stack",
+    "soon": "Coming soon",
+    "open_details": "Open project details",
+    "modal": {
+      "close": "Close",
+      "preview": "Preview",
+      "repo": "Repository",
+      "no_repo": "Repo coming soon",
+      "category_label": "Category",
+      "status_label": "Status"
+    },
+    "items": {
+      "churn": {
+        "title": "Customer churn prediction",
+        "description": "Binary classifier that flags customers at risk of leaving, trained on historical behaviour data.",
+        "long": "Reproducible pipeline that ingests transactional and usage data, derives recent-activity features, and trains supervised models to predict churn probability within a 90-day horizon.",
+        "goal": "F1 ≥ 0.80 on test set",
+        "detail": {
+          "problem": "Cut customer churn by flagging risky accounts before they leave, so retention actions can land in time.",
+          "data": "Anonymised historical customer table with usage logs, tickets, tenure and billing events. Time-based train/validation split.",
+          "approach": "Feature engineering (RFM, weekly deltas), comparison between logistic regression, random forest and XGBoost with stratified validation.",
+          "results": "Pending. Precision, recall, F1 and the PR curve will be reported on the test window against a simple-rule baseline.",
+          "next": "Bring in external signals (NPS, seasonality) and experiment with probability calibration."
+        }
+      },
+      "nlp_news": {
+        "title": "Topic classification for Spanish news",
+        "description": "NLP pipeline that tags news into politics, economy, sports, and culture using embeddings plus a supervised classifier.",
+        "long": "Multi-class classifier for Spanish-language news streams: preprocessing, pretrained embeddings, and a supervised model — with explicit focus on interpretability and performance on imbalanced classes.",
+        "goal": "Accuracy ≥ 0.85",
+        "detail": {
+          "problem": "Automatically tag each news item with a topic to enable aggregation, search and coverage analysis.",
+          "data": "Spanish news corpus with topic labels (politics, economy, sports, culture). Tokenisation, lemmatisation and entity cleaning included.",
+          "approach": "Multilingual transformer embeddings + supervised classifier (logreg / linear SVM). Evaluation with precision, recall and macro-F1.",
+          "results": "Pending. Will include confusion matrix and a qualitative review per category.",
+          "next": "Try lightweight transformer fine-tuning and extend to additional categories (tech, health, opinion)."
+        }
+      },
+      "dashboard_nomina": {
+        "title": "Government payroll dashboard",
+        "description": "Interactive Power BI dashboard with KPIs around stamping, withholdings, and reimbursements — sensitive data anonymized.",
+        "long": "Executive dashboard consolidating payroll operations: stamping volume, withholdings, processing errors and reimbursements. All sensitive data is anonymised before ingestion.",
+        "goal": "Automated daily refresh",
+        "detail": {
+          "problem": "Bring scattered payroll KPIs into one place and cut response time on internal audits.",
+          "data": "Internal payroll and stamping tables, anonymised via identifier tokenisation. Daily cadence.",
+          "approach": "Star schema with event fact tables, time and entity dimensions. DAX measures and area slicers.",
+          "results": "Pending. A public version with representative synthetic data will be shared.",
+          "next": "Threshold alerts and a scheduled PDF export for weekly review."
+        }
+      },
+      "viz_demografia": {
+        "title": "Interactive demographic atlas of Mexico",
+        "description": "Web visualization with D3 that cross-references INEGI data by state and municipality to explore population patterns.",
+        "long": "Interactive exploration of the Mexican census: choropleth map at the municipality level with switchable variables (population, density, median age), historic comparison and a national-figures sidebar.",
+        "goal": "Initial load < 2s",
+        "detail": {
+          "problem": "Make INEGI data accessible to non-technical users — comparing states and municipalities without wading through large tables.",
+          "data": "National Population and Housing Census, INEGI. Simplified TopoJSON geometry for the web.",
+          "approach": "Render with D3 + TypeScript, perceptually uniform palettes (viridis / cividis), hover and filter interactions.",
+          "results": "Pending. Load time and LCP on mid-range devices will be measured.",
+          "next": "Add historic series and comparison with intercensal surveys."
+        }
+      },
+      "automation_cfdi": {
+        "title": "Bulk CFDI dispatch pipeline",
+        "description": "Refactor of my statewide CFDI mailer into a reproducible pipeline with logging, retries, and address validation.",
+        "long": "Refactor of the current bulk-CFDI mailing job: idempotent tasks, recipient validation, error handling and per-batch traceability.",
+        "goal": "Delivery rate ≥ 99%",
+        "detail": {
+          "problem": "The current monolithic script isn't reproducible or auditable; SMTP failures get lost and there is no controlled retry.",
+          "data": "Recipient catalogue and email templates. Upfront validation via regex and domain checks.",
+          "approach": "Modular pipeline with an in-process queue, bounded exponential retries, structured logging and unit tests.",
+          "results": "Pending. Delivery rate, bounces and batch duration will be reported.",
+          "next": "Move to an orchestrator (Prefect / Airflow) and add a monitoring panel."
+        }
+      },
+      "rec_books": {
+        "title": "Technical-book recommender",
+        "description": "Hybrid content-based + collaborative recommender built on public Goodreads data.",
+        "long": "Hybrid recommender for technical books: content similarity (descriptions, tags) combined with rating-based collaborative filtering, with a focus on explaining each suggestion.",
+        "goal": "Hit@10 ≥ 0.4",
+        "detail": {
+          "problem": "Suggest relevant technical reads from a handful of known books — without collapsing into popularity bubbles.",
+          "data": "Public Goodreads subset with metadata, ratings and reviews. Filtered to technical categories.",
+          "approach": "Hybrid model: TF-IDF / embedding vectors of descriptions + matrix factorisation. Hit@10 and MRR on a time-based split.",
+          "results": "Pending. Will include comparison against popularity-only recommendations.",
+          "next": "Add diversity control and explicit filters by level and difficulty."
+        }
+      }
+    }
+  },
+  "timeline": {
+    "eyebrow": "Journey",
+    "title": "Education and experience",
+    "lead": "",
+    "type": {
+      "work": "Work",
+      "education": "Education"
+    },
+    "events": {
+      "comagua": {
+        "title": "HR Analyst, Level A",
+        "organization": "Mexico State Water Commission",
+        "description": "Administrative and analytical automation of the payroll tax-stamping process. Recovered a full year of stamping operations, built internal tools and prepared budget ceilings for the area."
+      },
+      "unitec_cd": {
+        "title": "Data Science Engineering Degree",
+        "organization": "UNITEC",
+        "description": "Ongoing degree focused on applied statistics, predictive modeling, and large-scale data processing."
+      },
+      "imss": {
+        "title": "Reimbursements Analyst",
+        "organization": "IMSS-Bienestar",
+        "description": "Per-worker analysis to detect undue charges and manage refunds. Automation of area processes and Microsoft Office support."
+      },
+      "imagen_it": {
+        "title": "Technical Support Manager",
+        "organization": "Imagen IT",
+        "description": "Technical support for multiple companies: hardware, software and networks. Preventive and corrective maintenance, CCTV management across three locations and supervision of corporate networks."
+      },
+      "oracle_one": {
+        "title": "Oracle ONE — DW Front-End",
+        "organization": "Oracle Next Education",
+        "description": "Training program on web development for data-warehousing applications."
+      },
+      "eks_oracle": {
+        "title": "Oracle Technical Consultant",
+        "organization": "EKS Solutions",
+        "description": "Trained technical consultants on Oracle technologies, with a focus on database design, management and performance optimization."
+      },
+      "cecyt": {
+        "title": "Informatics Technician",
+        "organization": "CECyT 14 \"Luis Enrique Erro Soler\", IPN",
+        "description": "Programming fundamentals, algorithms, databases, networking and technical support."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's connect",
+    "lead": "Interested in collaborating, discussing a project, or trading notes on a data science idea? Any of these channels works.",
+    "whatsapp_title": "WhatsApp",
+    "whatsapp_subtitle": "Direct message",
+    "email_title": "Email",
+    "email_subtitle": "Reply within 24h",
+    "linkedin_title": "LinkedIn",
+    "linkedin_subtitle": "Professional profile",
+    "footer_note": "Open to opportunities in data science, ML, and applied AI."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "role": "Aspiring Data Scientist & AI Engineer",
+    "built_with": "Built with React, TypeScript, and a homemade canvas."
+  },
+  "project_page": {
+    "back": "Back to portfolio",
+    "section": {
+      "problem": "Problem",
+      "data": "Data",
+      "approach": "Approach",
+      "results": "Results",
+      "next": "Next steps"
+    },
+    "meta": {
+      "status": "Status",
+      "category": "Category",
+      "stack": "Stack",
+      "goal": "Goal"
+    },
+    "related": "Other projects",
+    "repo_cta": "View repository",
+    "no_repo": "Repository coming soon",
+    "wip_note": "This page is still a skeleton. It will be filled in as the project advances.",
+    "not_found_title": "Project not found",
+    "not_found_body": "The project you're looking for doesn't exist or hasn't been published yet.",
+    "not_found_cta": "Back to portfolio"
+  }
+}

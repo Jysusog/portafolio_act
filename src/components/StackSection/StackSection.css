@@ -1,0 +1,106 @@
+.stack-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+  font-size: var(--fs-xs);
+  color: var(--text-mut);
+  letter-spacing: 0.06em;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.level-bar {
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+}
+
+.level-bar[data-level='learning'] {
+  background: linear-gradient(90deg, var(--accent-2) 33%, var(--border) 33%);
+}
+
+.level-bar[data-level='intermediate'] {
+  background: linear-gradient(90deg, var(--accent-2) 66%, var(--border) 66%);
+}
+
+.level-bar[data-level='solid'] {
+  background: var(--accent-2);
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+.stack-group {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.stack-group-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-mut);
+  margin-bottom: var(--space-4);
+  font-weight: 600;
+}
+
+.stack-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stack-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.stack-row:last-child {
+  border-bottom: none;
+}
+
+.stack-name {
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+
+.stack-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stack-level .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.stack-level[data-level='learning'] .dot:nth-child(1) {
+  background: var(--accent-2);
+}
+
+.stack-level[data-level='intermediate'] .dot:nth-child(1),
+.stack-level[data-level='intermediate'] .dot:nth-child(2) {
+  background: var(--accent-2);
+}
+
+.stack-level[data-level='solid'] .dot {
+  background: var(--accent-2);
+}

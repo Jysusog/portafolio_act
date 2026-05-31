@@ -1,0 +1,107 @@
+.timeline-list {
+  position: relative;
+  padding-left: 140px;
+  border-left: 1px solid var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 var(--space-7) var(--space-5);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -141px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 140px;
+  justify-content: flex-end;
+  padding-right: var(--space-4);
+}
+
+.marker-year {
+  font-size: var(--fs-sm);
+  color: var(--text-mut);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.marker-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  transform: translateX(calc(var(--space-4) + 5px));
+  margin-left: auto;
+}
+
+.timeline-type {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-3);
+}
+
+.timeline-type[data-type='work'] {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.timeline-type[data-type='education'] {
+  background: var(--accent-2-soft);
+  color: var(--warning);
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-1);
+  letter-spacing: -0.01em;
+}
+
+.timeline-org {
+  font-size: var(--fs-sm);
+  color: var(--text-mut);
+  margin-bottom: var(--space-2);
+  font-weight: 500;
+}
+
+.timeline-desc {
+  font-size: var(--fs-sm);
+  color: var(--text-mut);
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
+@media (max-width: 640px) {
+  .timeline-list {
+    padding-left: var(--space-5);
+  }
+
+  .timeline-item {
+    padding-left: var(--space-4);
+  }
+
+  .timeline-marker {
+    position: static;
+    transform: none;
+    padding-right: 0;
+    margin-bottom: var(--space-2);
+  }
+
+  .marker-dot {
+    transform: none;
+  }
+}

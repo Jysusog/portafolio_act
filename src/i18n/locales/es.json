@@ -1,0 +1,270 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "stack": "Stack",
+    "projects": "Proyectos",
+    "future": "En desarrollo",
+    "timeline": "Trayectoria",
+    "contact": "Contacto",
+    "theme_light": "Cambiar a tema claro",
+    "theme_dark": "Cambiar a tema oscuro",
+    "menu_open": "Abrir menú",
+    "menu_close": "Cerrar menú",
+    "language": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "Portafolio en construcción",
+    "greeting": "Hola, soy",
+    "name": "Jesús Martínez",
+    "title": "Estudiante de Ingeniería en IA · Aspirante a Científico de Datos",
+    "lead": "Documento aquí mi trayecto en la carrera: lo que aprendo, los datos con los que experimento y los modelos que voy construyendo.",
+    "stats": {
+      "experience_value": "4+",
+      "experience_label": "Años trabajando con datos",
+      "projects_value": "En curso",
+      "projects_label": "Proyectos académicos",
+      "focus_value": "ML · NLP · BI",
+      "focus_label": "Áreas de interés"
+    },
+    "cta_primary": "Ver proyectos",
+    "cta_secondary": "Contactar"
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "title": "Quién soy y qué busco",
+    "quote": "Me gusta contribuir de forma significativa a los equipos y proyectos en los que participo, buscando siempre facilitar el trabajo, mejorar procesos y encontrar soluciones prácticas.",
+    "quote_attr": "Mi enfoque profesional",
+    "currently_label": "Actualmente",
+    "currently_role": "Analista «A» en Recursos Humanos",
+    "currently_org": "Comisión del Agua del Estado de México",
+    "currently_study": "Ingeniería en Ciencia de Datos",
+    "currently_study_org": "UNITEC · 2025 – 2029",
+    "bio_lead": "Soy Jesús Martínez — analista de datos y técnico en informática mexicano, con cuatro años de trayecto entre consultoría Oracle, soporte de infraestructura y análisis en el sector público.",
+    "bio_p1": "Empecé como consultor técnico formando perfiles en bases de datos Oracle. De ahí pasé a soporte de infraestructura — equipos, redes y videovigilancia para empresas. El cambio importante llegó al entrar al sector público: primero como analista de reintegros en IMSS-Bienestar, y hoy en Recursos Humanos de la Comisión del Agua del Estado de México, donde automatizo procesos de nómina, regularizo el timbrado anual y desarrollo aplicativos para el área.",
+    "bio_p2": "El siguiente paso es modelar, no sólo reportar. Por eso curso Ingeniería en Ciencia de Datos en UNITEC y uso este portafolio para publicar cada proyecto formativo: del primer modelo de clasificación al primer dashboard reproducible con datos públicos.",
+    "bio_p3": "Lo que busco: equipos que tomen decisiones con datos, problemas operativos reales — en sector público o privado — y proyectos donde pueda traducir información en acciones concretas.",
+    "credentials_label": "Formación",
+    "cred_unitec": "Ingeniería en Ciencia de Datos",
+    "cred_oracle": "Oracle ONE — DW Front-End",
+    "cred_cecyt": "Técnico en Informática"
+  },
+  "stack": {
+    "eyebrow": "Stack técnico",
+    "title": "Herramientas con las que trabajo",
+    "lead": "Autoevaluación honesta del nivel actual. Se irá actualizando conforme cada tecnología se use en proyectos publicados.",
+    "level": {
+      "learning": "Aprendiendo",
+      "intermediate": "Intermedio",
+      "solid": "Sólido"
+    },
+    "category": {
+      "lang": "Lenguajes",
+      "data": "Datos y análisis",
+      "bi": "BI y visualización",
+      "tools": "Herramientas"
+    }
+  },
+  "projects": {
+    "eyebrow": "Proyectos publicados",
+    "title": "Trabajo terminado",
+    "lead": "Aún no hay proyectos publicados aquí. Estoy preparando los primeros entregables formales — sigue la sección «En desarrollo» para ver lo que viene.",
+    "empty": "Próximamente. Vuelve pronto."
+  },
+  "future": {
+    "eyebrow": "Roadmap",
+    "title": "En desarrollo",
+    "lead": "Proyectos que estoy planeando o construyendo durante la carrera. Cada tarjeta muestra el estado, el stack previsto y la métrica objetivo.",
+    "filter_all": "Todos",
+    "filter": {
+      "ml": "Machine Learning",
+      "nlp": "NLP",
+      "dataviz": "Visualización",
+      "dashboard": "Dashboard",
+      "automation": "Automatización"
+    },
+    "status": {
+      "planned": "Planeado",
+      "in_progress": "En curso",
+      "research": "Investigando"
+    },
+    "goal_label": "Meta",
+    "stack_label": "Stack",
+    "soon": "Próximamente",
+    "open_details": "Abrir detalles del proyecto",
+    "modal": {
+      "close": "Cerrar",
+      "preview": "Previsualización",
+      "repo": "Repositorio",
+      "no_repo": "Repo próximamente",
+      "category_label": "Categoría",
+      "status_label": "Estado"
+    },
+    "items": {
+      "churn": {
+        "title": "Predicción de churn en clientes",
+        "description": "Modelo de clasificación binaria para identificar clientes con riesgo de baja a partir de comportamiento histórico.",
+        "long": "Pipeline reproducible que ingiere datos transaccionales y de uso, deriva variables de actividad reciente y entrena modelos supervisados para predecir la probabilidad de baja en un horizonte de 90 días.",
+        "goal": "F1 ≥ 0.80 en conjunto de prueba",
+        "detail": {
+          "problem": "Reducir la tasa de fuga de clientes anticipando bajas antes de que ocurran y permitiendo intervenir con acciones de retención.",
+          "data": "Conjunto histórico anonimizado de clientes con registros de actividad, tickets, antigüedad y eventos de cobro. Particionado temporal entrenamiento/validación.",
+          "approach": "Ingeniería de variables (RFM, deltas semanales), comparación entre regresión logística, random forest y XGBoost con validación estratificada.",
+          "results": "Pendiente. Se reportarán precisión, recall, F1 y curva PR sobre el periodo de prueba, comparando contra una línea base de regla simple.",
+          "next": "Incorporar variables externas (NPS, estacionalidad) y experimentar con calibración de probabilidades."
+        }
+      },
+      "nlp_news": {
+        "title": "Clasificación temática de noticias en español",
+        "description": "Pipeline NLP que categoriza noticias en política, economía, deportes y cultura usando embeddings y un clasificador supervisado.",
+        "long": "Sistema de clasificación multiclase para flujos de noticias en español: preprocesamiento, embeddings preentrenados y modelo supervisado, con foco en interpretabilidad y desempeño en clases desbalanceadas.",
+        "goal": "Accuracy ≥ 0.85",
+        "detail": {
+          "problem": "Asignar automáticamente cada noticia a una categoría temática para facilitar agregación, búsqueda y análisis de cobertura mediática.",
+          "data": "Corpus de noticias en español con etiqueta temática (política, economía, deportes, cultura). Se contemplan tokenización, lematización y limpieza de entidades.",
+          "approach": "Embeddings de transformer multilingüe + clasificador supervisado (logreg / SVM lineal). Evaluación con precisión, recall y macro-F1.",
+          "results": "Pendiente. Se incluirán matriz de confusión y análisis cualitativo por categoría.",
+          "next": "Probar fine-tuning ligero del transformer y extender a más categorías (tecnología, salud, opinión)."
+        }
+      },
+      "dashboard_nomina": {
+        "title": "Dashboard de nómina gubernamental",
+        "description": "Tablero interactivo en Power BI con KPIs de timbrado, retenciones y reintegros, anonimizando datos sensibles.",
+        "long": "Panel ejecutivo que consolida métricas operativas de nómina: volumen de timbrados, retenciones, errores de procesamiento y reintegros. Todos los datos sensibles se anonimizan antes de la carga.",
+        "goal": "Refresco diario automatizado",
+        "detail": {
+          "problem": "Centralizar indicadores de nómina dispersos en varios reportes manuales y reducir el tiempo de respuesta a auditorías internas.",
+          "data": "Tablas internas de nómina y timbrado, anonimizadas con tokenización de identificadores. Periodicidad diaria.",
+          "approach": "Modelo en estrella con tablas de hechos por evento, dimensiones de tiempo y entidad. Medidas en DAX, segmentaciones por área.",
+          "results": "Pendiente. Se compartirá una versión pública con datos sintéticos representativos.",
+          "next": "Añadir alertas por umbrales y exportación programada a PDF para revisión semanal."
+        }
+      },
+      "viz_demografia": {
+        "title": "Atlas demográfico interactivo de México",
+        "description": "Visualización web con D3 que cruza datos de INEGI por entidad y municipio para explorar patrones poblacionales.",
+        "long": "Exploración interactiva del Censo de México: mapa coroplético por municipio con cambios de variable (población, densidad, edad mediana), historia comparativa y panel lateral con cifras nacionales.",
+        "goal": "Carga inicial < 2s",
+        "detail": {
+          "problem": "Hacer accesibles los datos del INEGI para personas no técnicas, permitiendo comparar entidades y municipios sin tablas extensas.",
+          "data": "Censo Nacional de Población y Vivienda, INEGI. Geometría en TopoJSON simplificado para web.",
+          "approach": "Renderizado con D3 + TypeScript, paletas perceptualmente uniformes (viridis / cividis), interacción con hover y filtros.",
+          "results": "Pendiente. Se medirá tiempo de carga y LCP en dispositivos medios.",
+          "next": "Incluir series históricas y comparativas con encuestas intercensales."
+        }
+      },
+      "automation_cfdi": {
+        "title": "Pipeline de envío masivo de CFDIs",
+        "description": "Refactor de mi script de envío estatal de CFDIs a un pipeline reproducible con logging, reintentos y validación de correos.",
+        "long": "Refactor del proceso actual de envío masivo de comprobantes fiscales: tareas idempotentes, validación de destinatarios, manejo de errores y trazabilidad por lote.",
+        "goal": "Tasa de entrega ≥ 99%",
+        "detail": {
+          "problem": "El script monolítico actual no es reproducible ni auditable; las fallas de SMTP se pierden y no hay reintento controlado.",
+          "data": "Catálogo de receptores y plantillas de correo. Validación previa con regex y verificación de dominio.",
+          "approach": "Pipeline modular con cola interna, reintentos exponenciales acotados, logging estructurado y pruebas unitarias.",
+          "results": "Pendiente. Se reportará tasa de entrega, bounces y tiempo total de envío por lote.",
+          "next": "Migrar a un orquestador (Prefect / Airflow) y agregar panel de monitoreo."
+        }
+      },
+      "rec_books": {
+        "title": "Recomendador de libros técnicos",
+        "description": "Sistema de recomendación basado en contenido y colaborativo con datos públicos de Goodreads.",
+        "long": "Recomendador híbrido para libros técnicos: combina similitud por contenido (descripciones, tags) con filtrado colaborativo basado en calificaciones, con foco en explicabilidad de cada recomendación.",
+        "goal": "Hit@10 ≥ 0.4",
+        "detail": {
+          "problem": "Sugerir lecturas técnicas relevantes a partir de un puñado de libros ya conocidos, sin caer en burbujas de popularidad.",
+          "data": "Subconjunto público de Goodreads con metadatos, calificaciones y reseñas. Filtrado a categorías técnicas.",
+          "approach": "Modelo híbrido: vectores TF-IDF / embeddings de descripción + factorización matricial. Métrica Hit@10 y MRR en split temporal.",
+          "results": "Pendiente. Se incluirá comparativa contra recomendaciones por popularidad.",
+          "next": "Agregar control de diversidad y permitir filtros explícitos por nivel y dificultad."
+        }
+      }
+    }
+  },
+  "timeline": {
+    "eyebrow": "Trayectoria",
+    "title": "Educación y experiencia",
+    "lead": "",
+    "type": {
+      "work": "Trabajo",
+      "education": "Educación"
+    },
+    "events": {
+      "comagua": {
+        "title": "Analista «A» en Recursos Humanos",
+        "organization": "Comisión del Agua del Estado de México",
+        "description": "Automatización de procesos administrativos y analíticos para el timbrado de nómina. Regularización del proceso de timbrado de un año laboral completo, desarrollo de aplicativos internos y elaboración de techos presupuestales para el área."
+      },
+      "unitec_cd": {
+        "title": "Ingeniería en Ciencia de Datos",
+        "organization": "UNITEC",
+        "description": "Carrera en curso enfocada en estadística aplicada, modelado predictivo y procesamiento de datos a escala."
+      },
+      "imss": {
+        "title": "Analista de Reintegros",
+        "organization": "IMSS-Bienestar",
+        "description": "Análisis individualizado por trabajador para detectar cobros indebidos y gestionar su devolución. Automatización de procesos del área y soporte técnico en Microsoft Office."
+      },
+      "imagen_it": {
+        "title": "Gerente en Soporte Técnico",
+        "organization": "Imagen IT",
+        "description": "Soporte técnico a múltiples empresas: hardware, software y redes. Mantenimiento preventivo y correctivo, gestión de CCTV en tres locaciones y supervisión de redes corporativas."
+      },
+      "oracle_one": {
+        "title": "Oracle ONE — DW Front-End",
+        "organization": "Oracle Next Education",
+        "description": "Programa formativo en desarrollo web orientado a aplicaciones de data warehousing."
+      },
+      "eks_oracle": {
+        "title": "Consultor Técnico Oracle",
+        "organization": "EKS Solutions",
+        "description": "Formación de consultores técnicos en tecnologías Oracle, con énfasis en diseño, gestión y optimización del rendimiento de bases de datos."
+      },
+      "cecyt": {
+        "title": "Técnico en Informática",
+        "organization": "CECyT 14 «Luis Enrique Erro Soler», IPN",
+        "description": "Fundamentos de programación, algoritmos, bases de datos, redes y soporte técnico."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Conectemos",
+    "lead": "¿Te interesa colaborar, comentar un proyecto o discutir una idea de ciencia de datos? Cualquiera de estos canales funciona.",
+    "whatsapp_title": "WhatsApp",
+    "whatsapp_subtitle": "Mensaje directo",
+    "email_title": "Correo",
+    "email_subtitle": "Respuesta en menos de 24h",
+    "linkedin_title": "LinkedIn",
+    "linkedin_subtitle": "Perfil profesional",
+    "footer_note": "Abierto a oportunidades en ciencia de datos, ML e IA aplicada."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "role": "Aspirante a Científico de Datos & Ingeniero en IA",
+    "built_with": "Hecho con React, TypeScript y un canvas casero."
+  },
+  "project_page": {
+    "back": "Volver al portafolio",
+    "section": {
+      "problem": "Problema",
+      "data": "Datos",
+      "approach": "Enfoque",
+      "results": "Resultados",
+      "next": "Próximos pasos"
+    },
+    "meta": {
+      "status": "Estado",
+      "category": "Categoría",
+      "stack": "Stack",
+      "goal": "Meta"
+    },
+    "related": "Otros proyectos",
+    "repo_cta": "Ver repositorio",
+    "no_repo": "Repositorio próximamente",
+    "wip_note": "Esta página aún es un esqueleto. Se irá llenando con resultados conforme el proyecto avance.",
+    "not_found_title": "Proyecto no encontrado",
+    "not_found_body": "El proyecto que buscas no existe o aún no está publicado.",
+    "not_found_cta": "Volver al portafolio"
+  }
+}

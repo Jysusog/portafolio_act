@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/Logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/Logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jesus Martinez.</title>
+    <meta
+      name="description"
+      content="Portafolio de Jesús Martínez — estudiante de Ingeniería en IA y aspirante a científico de datos. Documenta proyectos, stack y trayectoria académica."
+    />
+    <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jesús Martínez · Portafolio de Ciencia de Datos" />
+    <meta
+      property="og:description"
+      content="Bitácora de proyectos de ciencia de datos, machine learning y BI durante la carrera de IA."
+    />
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('portfolio.theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script>
+
+    <title>Jesús Martínez · Portafolio de Ciencia de Datos</title>
   </head>
   <body>
     <div id="root"></div>

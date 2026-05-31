@@ -1,29 +1,30 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import ProjectsCarousel from './components/ProjectsCarousel';
-import TimelineSection from './components/TimelineSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import ParticlesBackground from './components/ParticlesBackground';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { I18nProvider } from './contexts/I18nContext';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import ScrollToHash from './components/common/ScrollToHash';
+import HomePage from './pages/HomePage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
+import NotFoundPage from './pages/NotFoundPage';
 
-function App() {
-  return (
-    <>
-      <ParticlesBackground />
-      <div className="portfolio">
+const App = () => (
+  <BrowserRouter>
+    <ThemeProvider>
+      <I18nProvider>
+        <ScrollToHash />
         <Navbar />
-        <HeroSection />
-        <AboutSection />
-        <ProjectsCarousel />
-        <TimelineSection />
-        <ContactSection />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/proyectos/:slug" element={<ProjectDetailPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
         <Footer />
-      </div>
-    </>
-  );
-}
+      </I18nProvider>
+    </ThemeProvider>
+  </BrowserRouter>
+);
 
 export default App;
-
