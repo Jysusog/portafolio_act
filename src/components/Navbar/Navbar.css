@@ -5,15 +5,19 @@
   right: 0;
   height: var(--nav-height);
   z-index: 100;
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--transition-base), background var(--transition-base);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: background var(--transition-base), border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .navbar.is-scrolled {
+  background: color-mix(in srgb, var(--bg) 98%, transparent);
   border-bottom-color: var(--border);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-inner {
@@ -194,6 +198,22 @@
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
+@media (max-width: 900px) {
+  .navbar {
+    background: var(--bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border-bottom-color: var(--border);
+  }
+
+  .navbar.is-scrolled {
+    background: var(--bg);
+    box-shadow: none;
+    border-bottom-color: var(--border);
+  }
+}
+
 @media (max-width: 880px) {
   .brand-text {
     display: none;
@@ -208,19 +228,25 @@
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: var(--bg-elev);
+    background: var(--bg);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     padding: var(--space-3) var(--space-5) var(--space-5);
     transform: translateY(-110%);
-    transition: transform var(--transition-base);
-    box-shadow: var(--shadow-md);
+    visibility: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base),
+      visibility 0s var(--transition-base);
+    box-shadow: none;
   }
 
   .nav-links.is-open {
     transform: translateY(0);
+    visibility: visible;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    transition: transform var(--transition-base), box-shadow var(--transition-base),
+      visibility 0s 0s;
   }
 
   .nav-links li {

@@ -106,51 +106,107 @@ const ScatterRegressionCanvas = () => {
     const ro = new ResizeObserver(resize);
     ro.observe(canvas);
 
-    const padL = 36;
-    const padR = 20;
-    const padT = 28;
-    const padB = 32;
+    const padL = 48;
+    const padR = 28;
+    const padT = 32;
+    const padB = 44;
 
     const px = (x: number) => padL + x * Math.max(20, width - padL - padR);
     const py = (y: number) => padT + (1 - y) * Math.max(20, height - padT - padB);
 
     const drawAxes = () => {
-      const border = cssVar('--border');
-      const faint = cssVar('--text-faint');
-      ctx.strokeStyle = border;
-      ctx.lineWidth = 1;
-      ctx.globalAlpha = 0.6;
       const cols = 8;
       const rows = 5;
+      const plotW = Math.max(20, width - padL - padR);
+      const plotH = Math.max(20, height - padT - padB);
+
+      // Below 900px viewport: ambient grid only, no axes, ticks or labels
+      if (width < 900) {
+        const faint = cssVar('--text-faint');
+        ctx.strokeStyle = faint;
+        ctx.lineWidth = 1;
+        ctx.globalAlpha = 0.25;
+        ctx.beginPath();
+        for (let i = 1; i < cols; i++) {
+          const x = padL + (plotW / cols) * i;
+          ctx.moveTo(x, padT);
+          ctx.lineTo(x, height - padB);
+        }
+        for (let j = 1; j < rows; j++) {
+          const y = padT + (plotH / rows) * j;
+          ctx.moveTo(padL, y);
+          ctx.lineTo(width - padR, y);
+        }
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+        return;
+      }
+
+      const text = cssVar('--text');
+      const textMut = cssVar('--text-mut');
+      const textFaint = cssVar('--text-faint');
+
+      // Inner grid lines
+      ctx.strokeStyle = textFaint;
+      ctx.lineWidth = 1;
+      ctx.globalAlpha = 0.45;
       ctx.beginPath();
-      for (let i = 0; i <= cols; i++) {
-        const x = padL + ((width - padL - padR) / cols) * i;
+      for (let i = 1; i < cols; i++) {
+        const x = padL + (plotW / cols) * i;
         ctx.moveTo(x, padT);
         ctx.lineTo(x, height - padB);
       }
-      for (let j = 0; j <= rows; j++) {
-        const y = padT + ((height - padT - padB) / rows) * j;
+      for (let j = 1; j < rows; j++) {
+        const y = padT + (plotH / rows) * j;
         ctx.moveTo(padL, y);
         ctx.lineTo(width - padR, y);
       }
       ctx.stroke();
-      ctx.globalAlpha = 1;
 
-      ctx.fillStyle = faint;
-      ctx.font = `10px var(--font-mono, monospace)`;
+      // X and Y axes
+      ctx.strokeStyle = text;
+      ctx.lineWidth = 2.5;
+      ctx.globalAlpha = 0.85;
+      ctx.beginPath();
+      ctx.moveTo(padL, padT);
+      ctx.lineTo(padL, height - padB);
+      ctx.moveTo(padL, height - padB);
+      ctx.lineTo(width - padR, height - padB);
+      ctx.stroke();
+
+      // Tick marks
+      ctx.strokeStyle = textMut;
+      ctx.lineWidth = 1.6;
+      ctx.globalAlpha = 1;
+      ctx.beginPath();
+      for (let j = 0; j <= rows; j++) {
+        const y = padT + (plotH / rows) * j;
+        ctx.moveTo(padL - 7, y);
+        ctx.lineTo(padL, y);
+      }
+      for (let i = 0; i <= cols; i++) {
+        const x = padL + (plotW / cols) * i;
+        ctx.moveTo(x, height - padB);
+        ctx.lineTo(x, height - padB + 7);
+      }
+      ctx.stroke();
+
+      // Tick labels
+      ctx.fillStyle = textMut;
+      ctx.font = `11px var(--font-mono, monospace)`;
       ctx.textAlign = 'right';
       ctx.textBaseline = 'middle';
       for (let j = 0; j <= rows; j++) {
         const v = (1 - j / rows).toFixed(1);
-        const y = padT + ((height - padT - padB) / rows) * j;
-        ctx.fillText(v, padL - 6, y);
+        const y = padT + (plotH / rows) * j;
+        ctx.fillText(v, padL - 11, y);
       }
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
       for (let i = 0; i <= cols; i++) {
         const v = (i / cols).toFixed(1);
-        const x = padL + ((width - padL - padR) / cols) * i;
-        ctx.fillText(v, x, height - padB + 6);
+        const x = padL + (plotW / cols) * i;
+        ctx.fillText(v, x, height - padB + 11);
       }
     };
 

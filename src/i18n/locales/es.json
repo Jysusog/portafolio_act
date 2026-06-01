@@ -184,7 +184,11 @@
   "timeline": {
     "eyebrow": "Trayectoria",
     "title": "Educación y experiencia",
-    "lead": "",
+    "lead": "Visualizado como dos gráficas de barras horizontales: la longitud de cada barra representa la duración real del rol o programa.",
+    "work_title": "Experiencia laboral",
+    "education_title": "Formación académica",
+    "ongoing": "Act.",
+    "axis_label": "Año",
     "type": {
       "work": "Trabajo",
       "education": "Educación"
@@ -241,8 +245,7 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "role": "Aspirante a Científico de Datos & Ingeniero en IA",
-    "built_with": "Hecho con React, TypeScript y un canvas casero."
+    "role": "Aspirante a Científico de Datos & Ingeniero en IA"
   },
   "project_page": {
     "back": "Volver al portafolio",

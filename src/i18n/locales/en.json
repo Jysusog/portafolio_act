@@ -184,7 +184,11 @@
   "timeline": {
     "eyebrow": "Journey",
     "title": "Education and experience",
-    "lead": "",
+    "lead": "Visualized as two horizontal bar charts: each bar's length represents the actual duration of the role or program.",
+    "work_title": "Work experience",
+    "education_title": "Academic background",
+    "ongoing": "Now",
+    "axis_label": "Year",
     "type": {
       "work": "Work",
       "education": "Education"
@@ -241,8 +245,7 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "role": "Aspiring Data Scientist & AI Engineer",
-    "built_with": "Built with React, TypeScript, and a homemade canvas."
+    "role": "Aspiring Data Scientist & AI Engineer"
   },
   "project_page": {
     "back": "Back to portfolio",

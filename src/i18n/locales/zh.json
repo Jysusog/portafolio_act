@@ -184,7 +184,11 @@
   "timeline": {
     "eyebrow": "经历",
     "title": "教育与工作",
-    "lead": "",
+    "lead": "以两个横向条形图呈现:每条柱形的长度代表对应职位或学业的实际持续时间。",
+    "work_title": "工作经历",
+    "education_title": "教育背景",
+    "ongoing": "至今",
+    "axis_label": "年份",
     "type": {
       "work": "工作",
       "education": "教育"
@@ -241,8 +245,7 @@
   },
   "footer": {
     "rights": "保留所有权利。",
-    "role": "数据科学家 / AI 工程师候选人",
-    "built_with": "使用 React、TypeScript 和自制 canvas 构建。"
+    "role": "数据科学家 / AI 工程师候选人"
   },
   "project_page": {
     "back": "返回作品集",

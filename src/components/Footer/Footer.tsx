@@ -10,7 +10,6 @@ const Footer = () => {
         <p className="footer-line">
           © {year} Jesús Martínez · <span className="mono">{t('footer.role')}</span>
         </p>
-        <p className="footer-sub">{t('footer.built_with')}</p>
       </div>
     </footer>
   );

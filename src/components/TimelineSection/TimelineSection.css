@@ -1,107 +1,389 @@
-.timeline-list {
-  position: relative;
-  padding-left: 140px;
-  border-left: 1px solid var(--border);
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
 }
 
-.timeline-item {
-  position: relative;
-  padding: 0 0 var(--space-7) var(--space-5);
-}
-
-.timeline-item:last-child {
-  padding-bottom: 0;
-}
-
-.timeline-marker {
-  position: absolute;
-  left: -141px;
-  top: 0;
+.chart-panel {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  width: 140px;
-  justify-content: flex-end;
-  padding-right: var(--space-4);
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-base);
+  min-width: 0;
 }
 
-.marker-year {
-  font-size: var(--fs-sm);
+.chart-panel:hover {
+  border-color: var(--border-strong);
+}
+
+.chart-panel-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.chart-panel-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
   color: var(--text-mut);
+}
+
+.chart-panel-eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  flex-shrink: 0;
+}
+
+.chart-panel[data-variant='work'] .chart-panel-eyebrow::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.chart-panel[data-variant='education'] .chart-panel-eyebrow::before {
+  background: var(--accent-2);
+  box-shadow: 0 0 0 3px var(--accent-2-soft);
+}
+
+.chart-panel-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.chart-panel-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  min-width: 0;
+}
+
+.chart-panel-count {
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
   letter-spacing: 0.04em;
   white-space: nowrap;
 }
 
-.marker-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 2px solid var(--accent);
-  flex-shrink: 0;
-  transform: translateX(calc(var(--space-4) + 5px));
-  margin-left: auto;
+.chart-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
 }
 
-.timeline-type {
-  display: inline-block;
+.chart-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ============================================================
+   Base row layout: 3 columns — label / track / period
+   ============================================================ */
+.chart-row,
+.chart-axis-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.9fr) minmax(0, 2.1fr) minmax(72px, auto);
+  column-gap: var(--space-3);
+  row-gap: var(--space-2);
+  align-items: center;
+}
+
+.chart-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
+  min-width: 0;
+}
+
+.chart-label-org {
   font-size: var(--fs-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 2px var(--space-2);
-  border-radius: var(--radius-sm);
-  margin-bottom: var(--space-3);
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-.timeline-type[data-type='work'] {
-  background: var(--accent-soft);
-  color: var(--accent);
-}
-.timeline-type[data-type='education'] {
-  background: var(--accent-2-soft);
-  color: var(--warning);
-}
-
-.timeline-title {
-  font-family: var(--font-display);
-  font-size: var(--fs-md);
-  font-weight: 600;
+.chart-label-title {
+  font-size: var(--fs-sm);
   color: var(--text);
-  margin-bottom: var(--space-1);
-  letter-spacing: -0.01em;
-}
-
-.timeline-org {
-  font-size: var(--fs-sm);
-  color: var(--text-mut);
-  margin-bottom: var(--space-2);
   font-weight: 500;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-.timeline-desc {
-  font-size: var(--fs-sm);
+.chart-track {
+  position: relative;
+  height: 28px;
+  background: var(--bg-sunken);
+  border-radius: var(--radius-sm);
+  overflow: visible;
+  min-width: 0;
+}
+
+.chart-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--radius-sm);
+  min-width: 10px;
+  background: var(--accent);
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+
+.chart-panel[data-variant='education'] .chart-bar {
+  background: var(--accent-2);
+}
+
+.chart-row:hover .chart-bar {
+  filter: brightness(1.08);
+  transform: scaleY(1.06);
+}
+
+.chart-bar[data-ongoing],
+.chart-bar[data-future] {
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent) 55%,
+    color-mix(in srgb, var(--accent) 60%, transparent) 88%,
+    color-mix(in srgb, var(--accent) 0%, transparent) 100%
+  );
+}
+
+.chart-panel[data-variant='education'] .chart-bar[data-ongoing],
+.chart-panel[data-variant='education'] .chart-bar[data-future] {
+  background: linear-gradient(
+    90deg,
+    var(--accent-2) 0%,
+    var(--accent-2) 55%,
+    color-mix(in srgb, var(--accent-2) 60%, transparent) 88%,
+    color-mix(in srgb, var(--accent-2) 0%, transparent) 100%
+  );
+}
+
+.chart-bar[data-ongoing]::after,
+.chart-bar[data-future]::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 8px 0 8px 10px;
+  border-color: transparent transparent transparent var(--accent);
+}
+
+.chart-panel[data-variant='education'] .chart-bar[data-ongoing]::after,
+.chart-panel[data-variant='education'] .chart-bar[data-future]::after {
+  border-left-color: var(--accent-2);
+}
+
+.chart-period {
+  font-size: var(--fs-xs);
   color: var(--text-mut);
-  line-height: 1.65;
-  max-width: 60ch;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: left;
+  align-self: center;
 }
 
-@media (max-width: 640px) {
-  .timeline-list {
-    padding-left: var(--space-5);
+.chart-row:hover .chart-period {
+  color: var(--text);
+}
+
+/* ============================================================
+   Axis row
+   ============================================================ */
+.chart-axis-row {
+  margin-top: var(--space-3);
+}
+
+.chart-axis-label {
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-align: right;
+  align-self: start;
+  padding-top: 14px;
+  padding-right: var(--space-2);
+  white-space: nowrap;
+}
+
+.chart-axis {
+  position: relative;
+  height: 28px;
+  min-width: 0;
+}
+
+.chart-axis-spacer {
+  display: block;
+}
+
+.chart-axis-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+.chart-tick {
+  position: absolute;
+  top: 10px;
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+.chart-tick[data-align='center'] {
+  transform: translateX(-50%);
+}
+
+.chart-tick[data-align='start'] {
+  transform: translateX(0);
+}
+
+.chart-tick[data-align='end'] {
+  transform: translateX(-100%);
+}
+
+.chart-tick::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 5px;
+  background: var(--border-strong);
+}
+
+.chart-tick[data-align='center']::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chart-tick[data-align='start']::before {
+  left: 0;
+}
+
+.chart-tick[data-align='end']::before {
+  right: 0;
+}
+
+/* ============================================================
+   Breakpoints
+   ============================================================ */
+
+/* Tablet / narrow desktop — collapse to 1 panel per row */
+@media (max-width: 1024px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
   }
 
-  .timeline-item {
-    padding-left: var(--space-4);
+  /* with full width, give label a bit more room */
+  .chart-row,
+  .chart-axis-row {
+    grid-template-columns: minmax(150px, 0.7fr) minmax(0, 3fr) minmax(80px, auto);
+  }
+}
+
+/* Small tablet / large phone — keep horizontal but tighten label */
+@media (max-width: 720px) {
+  .chart-panel {
+    padding: var(--space-4);
+    gap: var(--space-4);
   }
 
-  .timeline-marker {
-    position: static;
-    transform: none;
-    padding-right: 0;
-    margin-bottom: var(--space-2);
+  .chart-row,
+  .chart-axis-row {
+    grid-template-columns: minmax(120px, 0.8fr) minmax(0, 2.4fr) minmax(70px, auto);
+    column-gap: var(--space-2);
+  }
+}
+
+/* Phone — stack label/period above, bar below */
+@media (max-width: 560px) {
+  .chart-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'label period'
+      'track track';
+    row-gap: var(--space-2);
+    column-gap: var(--space-3);
+    padding: var(--space-3) 0;
+    border-bottom: 1px dashed var(--border);
   }
 
-  .marker-dot {
-    transform: none;
+  .chart-row:last-child {
+    border-bottom: none;
+  }
+
+  .chart-label {
+    grid-area: label;
+    text-align: left;
+    min-width: 0;
+  }
+
+  .chart-track {
+    grid-area: track;
+    height: 22px;
+  }
+
+  .chart-period {
+    grid-area: period;
+    align-self: start;
+    color: var(--text);
+    font-weight: 500;
+    padding-top: 2px;
+  }
+
+  .chart-axis-row {
+    grid-template-columns: 1fr;
+    margin-top: var(--space-2);
+  }
+
+  .chart-axis-label,
+  .chart-axis-spacer {
+    display: none;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .chart-panel {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .chart-label-org {
+    font-size: 0.7rem;
+  }
+
+  .chart-tick {
+    font-size: 0.65rem;
   }
 }
